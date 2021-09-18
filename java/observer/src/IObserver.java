@@ -1,3 +1,3 @@
 public interface IObserver {
-    void update(int i);
+    void update();
 }

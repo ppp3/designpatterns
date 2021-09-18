@@ -17,11 +17,11 @@ abstract public class Subject {
         observers.remove(ob);
     }
 
-    public void notifyObserver(int i)
+    public void notifyObserver()
     {
         for(var oberserver:observers)
         {
-            oberserver.update(i);
+            oberserver.update();
         }
     }
 
