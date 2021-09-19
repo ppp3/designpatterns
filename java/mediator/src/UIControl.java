@@ -1,12 +1,22 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class UIControl{
-	protected DialogBox owner;
+public abstract class UIControl{
 
+	private List<EventHandler> eventHandlers =new ArrayList<EventHandler>();
 
-	public UIControl(DialogBox owner) {
-		this.owner = owner;
+	public void addEventHandler(EventHandler eventHandler)
+	{
+		eventHandlers.add(eventHandler);
+
+	}
+
+	protected void notifyEventHandlers()
+	{
+		for (EventHandler eventHandler : eventHandlers)
+		{
+			eventHandler.handle();
+		}
 	}
 }
 

@@ -1,8 +1,4 @@
 public class Button extends UIControl{
-    public Button(DialogBox owner) {
-        super(owner);
-
-    }
 
     public boolean isEnabled() {
         return isEnabled;
@@ -10,7 +6,7 @@ public class Button extends UIControl{
 
     public void setEnabled(boolean enabled) {
         isEnabled = enabled;
-        owner.changed(this);
+        notifyEventHandlers();
     }
 
     private boolean isEnabled;
