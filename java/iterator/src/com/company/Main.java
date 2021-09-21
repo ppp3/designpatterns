@@ -1,5 +1,7 @@
 package com.company;
 
+import aufgabe.Demo;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,9 +15,11 @@ public class Main {
         while (iterator.hasNext())
         {
             var url=iterator.current();
-            System.out.println(url);
+            //System.out.println(url);
             iterator.next();
         }
+
+        Demo.show();
 
     }
 }
