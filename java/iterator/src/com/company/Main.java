@@ -1,4 +1,4 @@
-package code.iterator;
+package com.company;
 
 public class Main {
 
@@ -9,9 +9,12 @@ public class Main {
         history.push("b");
         history.push("c");
 
-        for (int i=0; i<history.getUrls().size(); i++)
+        var iterator=history.createIterator();
+        while (iterator.hasNext())
         {
-            System.out.println(history.getUrls().get(i));
+            var url=iterator.current();
+            System.out.println(url);
+            iterator.next();
         }
 
     }
