@@ -9,7 +9,7 @@ public class Main {
         history.push("b");
         history.push("c");
 
-        var iterator=history.createIterator();
+        Iterator iterator=history.createIterator();
         while (iterator.hasNext())
         {
             var url=iterator.current();
