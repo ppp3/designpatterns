@@ -1,15 +1,10 @@
 package com.company;
 
-public class GenerateReportTask {
-    private AuditTrail auditTrail;
+public class GenerateReportTask extends Task{
 
-    public GenerateReportTask(AuditTrail auditTrail) {
-        this.auditTrail = auditTrail;
-    }
-
-    void execute()
+    @Override
+    protected void doExecute()
     {
-        auditTrail.record();
         System.out.println("Generate Report");
     }
 }
