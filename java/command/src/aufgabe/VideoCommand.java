@@ -1,4 +1,5 @@
 package aufgabe;
 
-public class VideoCommand {
+interface VideoCommand {
+    void execute();
 }

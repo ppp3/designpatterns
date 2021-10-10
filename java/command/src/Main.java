@@ -1,3 +1,5 @@
+import aufgabe.SetTextCommand;
+import aufgabe.VideoEditor;
 import fx.BlackAndWhiteCommand;
 import fx.BlackAndWhiteCommand;
 import fx.Button;
@@ -37,6 +39,8 @@ public class Main {
         undoCommand.execute();
         System.out.println(document.getContent());
 
+        var videoEditor=new VideoEditor();
+        SetTextCommand command1=new SetTextCommand(videoEditor, "Mein Text");
 
     }
 }
