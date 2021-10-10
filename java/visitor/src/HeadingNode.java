@@ -1,7 +1,8 @@
 public class HeadingNode  implements  HtmlNode{
 
     @Override
-    public void highlight() {
-        System.out.println("Highlight heading");
+    public void execute(Operation op) {
+        op.apply(this);
+
     }
 }

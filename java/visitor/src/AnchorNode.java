@@ -1,6 +1,9 @@
 public class AnchorNode implements HtmlNode{
+
+
     @Override
-    public void highlight() {
-            System.out.println("Highlight Anchor");
+    public void execute(Operation op) {
+        op.apply(this);
+
     }
 }
