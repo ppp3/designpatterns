@@ -3,23 +3,28 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Group {
-    private List<Object> objects =new ArrayList<Object>();
+public class Group implements Component{
+    private List<Component> components =new ArrayList<Component>();
 
-    public void add(Object shape)
+    public void add(Component component)
     {
-        objects.add(shape);
+        components.add(component);
     }
-
+    @Override
     public void render()
     {
-        //Composite Pattern kommt hier zur Anwendung
-        for (var object: objects)
+
+        for (var component: components)
         {
-            if (object instanceof Shape)
-                ((Shape) object).render();
-            else
-                ((Group)object).render();
+                component.render();
+        }
+    }
+
+    @Override
+    public void move() {
+        for (var component: components)
+        {
+            component.move();
         }
     }
 }
