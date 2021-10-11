@@ -1,11 +1,17 @@
 package com.company;
 
-public class CompressedCloudStream extends CloudStream{
+public class CompressedCloudStream implements Stream{
+    private Stream stream;
+
+    public CompressedCloudStream(Stream stream) {
+        this.stream = stream;
+    }
+
 
     @Override
     public void write(String data) {
         var compressed=compress(data);
-        super.write(compressed);
+        stream.write(compressed);
     }
 
     private String compress(String data)

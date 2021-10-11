@@ -1,6 +1,7 @@
 package com.company;
 
-public class CloudStream {
+public class CloudStream implements Stream
+{
 
     public void write(String data)
     {
