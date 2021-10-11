@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.aufgabe.Demo;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,5 +21,7 @@ public class Main {
 
         group.move();
 
+        Demo demo=new Demo();
+        demo.show();
     }
 }
