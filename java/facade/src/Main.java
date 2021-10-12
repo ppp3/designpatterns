@@ -1,8 +1,11 @@
+import aufgabe.Demo;
+import aufgabe.TwitterService;
+
 public class Main {
 
     public static void main(String[] args) {
-        var service =new NotificationService();
-        service.send("Hello World", "target");
+        var demo=new TwitterService();
+        demo.getRecentTweet();
 
     }
 }
